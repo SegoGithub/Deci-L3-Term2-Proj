@@ -7538,7 +7538,8 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>twitter_archive_enhanced.csv was easy to load into the notebook and image_predictions.tsv is programatically downloaded and loaded.</p>
+<p>twitter_archive_enhanced.csv was easy to load into the notebook with a simple <code>read_csv()</code></p>
+<p>image_predictions.tsv is programatically downloaded with requests and loaded with <code>read_csv()</code> too but with the seperator as <code>\t</code> due to it being a tsv file</p>
 <p>tweet_json.txt was used due to the X API changes which no longer allows free accounts to query tweet information.</p>
 <p>tweet_json.txt has a json element on each line with the tweet's information, this isn't valid JSON due to 2 reasons:</p>
 <ul>
@@ -7551,7 +7552,8 @@ a.anchor-link {
 <li>put every element in a JSON list</li>
 <li>join each line with a comma seperator</li>
 </ul>
-<p>This transforms our data into valid JSON which pandas can read.</p>
+<p>Thanks to pandas, the above was done in less than a second.</p>
+<p>This transforms our data into valid JSON which pandas can read imported with <code>read_json()</code>.</p>
 </div>
 </div>
 </div>
@@ -7573,7 +7575,8 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Data was assessed visually and programatically, visually just being scrolling through the document in a non-directed and directed way and programatically being using pandas functions to locate data quality issues.</p>
+<p>Data was assessed visually and programatically, visually just being scrolling through the document in a non-directed and directed way and programatically being using pandas functions to locate data quality issues and check data types and the values of each column.</p>
+<p>The program I used to visually assess was Microsoft Excel.</p>
 </div>
 </div>
 </div>
@@ -7601,7 +7604,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Some issues were rare and could only be spotted with visual assessment such as the Snoop Dogg tweet and a very few amount of ratings being incorrect</p>
+<p>Some issues were rare and could only be spotted with visual assessment such as the Snoop Dogg tweet and a very few amount of ratings being incorrect.</p>
 </div>
 </div>
 </div>
@@ -7624,6 +7627,17 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>Data was cleaned and tidied up, when new issues were found while cleaning, I would go back to assessment and iterate on the data wrangling process.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>After each cleaning step, I would go back to the data and assess it again to find more and more issues until I was happy with the quality and tidiness of the data.</p>
 </div>
 </div>
 </div>
